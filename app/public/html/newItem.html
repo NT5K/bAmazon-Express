@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Add a new item to the database</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- reset.css -->
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- style.css-->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+
+
+<body>
+
+    <div class="container-fluid text-center mb-5 pt-3">
+
+        <div class="p-3 bg-cstm text-white roundedbody ">
+            <h1>bAmazon Manager Express</h1>
+        </div>
+    
+        <div class="row pt-2 pb-4">
+            <div class="col-3">
+                <a href="/" class="">View all items for sale</a>
+            </div>
+            <div class="col-3">
+                <a href="/20ItemsOrLess" class="">View Items with 20 or less stock</a>
+            </div>
+            <div class="col-3">
+                <a href="/addUnits" class="">Add units to a products inventory</a>
+            </div>
+            <div class="col-3">
+                <a href="/newItem" class="">Add a new item</a>
+            </div>
+        </div>
+    
+        <div class="p-4">
+            <h3><u>Add a new item</u></h3>
+        </div>
+
+        <!-- form -->
+        <div class="container-fluid text-center">  
+
+            <form action="/posttodatabase" method="post">
+
+                <!-- id="product-name"  name="product-name"  -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">Product Name</span>
+                            </div>
+                            <input type="text" id="productname" name="productname" class="form-control" placeholder="Spongebob Undies" aria-label="Username"
+                                aria-describedby="product-name">
+                        </div> 
+                    </div>
+                </div>
+
+                <!-- id="department-name" name="department-name"--> 
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="department-name">Department</label>
+                    </div>
+                    <select class="custom-select" id="departmentname" name="departmentname">
+                        <option selected>Choose...</option>
+                        <!-- dynamically built options -->
+                    </select>
+                </div>
+                
+                <!-- price & quantity row -->
+                <div class="row">
+
+                    <!-- id="input-price" name="input-price" -->
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                            </div>
+                            <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" id="inputprice" name="inputprice">
+                            <div class="input-group-append">
+                                <span class="input-group-text">.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- id="product-quantity" name="product-quantity  -->
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="product-quantity">Quantity</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="number" aria-label="quantity" id="productquantity" name="productquantity"
+                                aria-describedby="product-quantity">
+                        </div>
+                    </div>
+
+                </div>  
+
+                <!-- submit form button -->
+                <button type="submit" class="btn btn-outline-secondary" id="submitproduct" value="create item">Submit Product</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- main javascript -->
+    <script src="../javascript/main.js"></script>
+
+</body>
+
+</html>
