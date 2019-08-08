@@ -26,7 +26,7 @@ const tableData = (data) => {
     '<th scope="row">' + data.id + '</th>' +
     '<td>' + data.product_name + '</td>' +
     '<td>' + data.department_name + '</td>' +
-    '<td>' + data.price + '</td>' +
+    '<td>$' + data.price + '</td>' +
     '<td>' + data.stock_quantity + '</td>' +
     '</tr>'
 }

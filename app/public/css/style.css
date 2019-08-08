@@ -30,7 +30,7 @@ a {
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  max-width: 900px;
+  max-width: 1000px;
 }
 
 /* select, option { width: 50px; } */
