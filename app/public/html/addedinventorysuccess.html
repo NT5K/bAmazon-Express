@@ -13,6 +13,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- style.css-->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- roboto font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +41,28 @@
         </div>
 
         <div class="p-4">
-            <h3><u>Congratulations! You have updated an items quantity!</u></h3>
+            <h3 id="itemsUnitsAdded"><u>Congratulations! You have updated an items quantity!</u></h3>
+        </div>
+
+        <div class="row text-center justify-content-center border border-1 border-success">
+        
+            <div class="col-10">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col"><b>ID</b></th>
+                            <th scope="col"><b>Product Name</b></th>
+                            <th scope="col"><b>Department</b></th>
+                            <th scope="col"><b>Price</b></th>
+                            <th scope="col"><b>Quantity</b></th>
+                        </tr>
+                    </thead>
+                    <tbody id="ItemsDiv4">
+                        <!-- new table data here -->
+                    </tbody>
+                </table>
+            </div>
+        
         </div>
 
     </div>

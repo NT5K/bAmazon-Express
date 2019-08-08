@@ -34,7 +34,7 @@ module.exports = (app) => {
         const query = "Select * FROM products WHERE stock_quantity <= 20";
 
         // query the products database
-        connection.query(query, function (err, result) {
+        connection.query(query, (err, result) => {
 
             if (err) {
                 console.log(err);
@@ -138,7 +138,7 @@ module.exports = (app) => {
         const columnQuery = "SELECT * FROM products WHERE id = ?"
 
         // first query to get the column
-        connection.query(columnQuery, [itemId], function (err, res) { 
+        connection.query(columnQuery, [itemId], (err, res) => { 
             // catch any errors
             if (err) {
                 throw err
@@ -198,6 +198,27 @@ module.exports = (app) => {
     })
 
 //===========================================================================
+    // most recent updated column
+
+
+    app.get('/mostrecentitem', (request, result) => {
+
+        const query = "SELECT * FROM products ORDER BY createdAt desc LIMIT 1"
+
+        connection.query(query, (err, res) => {
+
+            if (err) {
+                console.log(err);
+                res.json({ "error": true });
+            }
+            else {
+                // console.log("results displayed at /fromdatabase");
+                result.json(res);
+            }
+
+        })
+
+    })       
 
 }
 

@@ -13,6 +13,8 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- style.css-->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <!-- roboto font -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
@@ -65,7 +67,7 @@
                     <div class="input-group-prepend">
                         <span class="input-group-text" id="product-quantity">Quantity</span>
                     </div>
-                    <input type="number" class="form-control" placeholder="number" aria-label="quantity"
+                    <input type="number" class="form-control" placeholder="units amount" aria-label="quantity"
                         id="productquantity" name="productquantity" aria-describedby="product-quantity">
                 </div>
                
@@ -77,17 +79,17 @@
 
         </div>
 
-        <div class="row text-center justify-content-center border border-success">
+        <div class="row text-center justify-content-center border border-1 border-success">
 
             <div class="col-10">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Product Name</th>
-                            <th scope="col">Department</th>
-                            <th scope="col">Price</th>
-                            <th scope="col">Quantity</th>
+                            <th scope="col"><b>ID</b></th>
+                            <th scope="col"><b>Product Name</b></th>
+                            <th scope="col"><b>Department</b></th>
+                            <th scope="col"><b>Price</b></th>
+                            <th scope="col"><b>Quantity</b></th>
                         </tr>
                     </thead>
                     <tbody id="ItemsDiv">
